@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     cleanCSS = require('gulp-clean-css'),
     babel = require('gulp-babel'),
 
@@ -65,7 +66,8 @@ scripts = function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(uglify().on('error', function (e) {
+        //.pipe(uglify().on('error', function (e) {
+        .pipe(terser().on('error', function (e) {
             console.log(e);
         }))
         .pipe(gulp.dest(dest_js_directory + 'app/'));
