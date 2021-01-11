@@ -1,3 +1,5 @@
+Modified version of GoPhish with experimental branches merged in
+
 ![gophish logo](https://raw.github.com/gophish/gophish/master/static/images/gophish_purple.png)
 
 Gophish
